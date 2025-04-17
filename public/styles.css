@@ -1,0 +1,316 @@
+:root {
+    --primary: #9945FF;
+    --secondary: #14F195;
+    --dark: #0F0F0F;
+    --light: #FFFFFF;
+    --gray: #2D2D2D;
+    --success: #14F195;
+    --warning: #FFD166;
+    --danger: #EF476F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gray);
+}
+
+h1 {
+    font-size: 28px;
+    color: var(--secondary);
+}
+
+h1 i {
+    margin-right: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+}
+
+h2 i {
+    margin-right: 8px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #7a36cc;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 20px;
+    height: calc(100vh - 100px);
+}
+
+.column {
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    padding: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.whale-tracker, .tweet-feed, .kol-trending {
+    overflow-y: auto;
+}
+
+/* Whale Tracker Styles */
+.whale-transaction {
+    background-color: var(--gray);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.whale-emoji {
+    font-size: 24px;
+}
+
+.whale-details {
+    flex-grow: 1;
+}
+
+.whale-name {
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.whale-amount {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.token-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.token-link {
+    font-size: 12px;
+    color: var(--primary);
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.token-link:hover {
+    text-decoration: underline;
+}
+
+/* Tweet Feed Styles */
+.tweet-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tweet-controls input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
+    background-color: #2D2D2D;
+    color: white;
+}
+
+.tweet {
+    background-color: var(--gray);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tweet-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tweet-user {
+    font-weight: bold;
+}
+
+.tweet-handle {
+    color: #aaa;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.tweet-time {
+    color: #aaa;
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.tweet-content {
+    margin-bottom: 10px;
+}
+
+.tweet-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* KOL Trending Styles */
+.trending-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--gray);
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.trending-rank {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.trending-name {
+    font-weight: bold;
+}
+
+.trending-mc {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Tool Sections */
+.tool-section {
+    margin-top: 20px;
+    background-color: #1E1E1E;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tool-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tool-container input {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
+    background-color: #2D2D2D;
+    color: white;
+}
+
+.result {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #2D2D2D;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a36cc;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+    }
+    
+    .kol-tools {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .kol-tools {
+        grid-column: span 1;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
