@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Alpha Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Solana Alpha Tracker</h1>
+            <div class="controls">
+                <button id="refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+                <button id="pause-tweets"><i class="fas fa-pause"></i> Pause Feed</button>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <!-- Column 1: Whale Wallet Tracker -->
+            <div class="column whale-tracker">
+                <h2><i class="fas fa-whale"></i> Whale Transactions</h2>
+                <div class="whale-list" id="whale-transactions">
+                    <!-- Whale transactions will be populated here -->
+                </div>
+            </div>
+
+            <!-- Column 2: Live Tweets -->
+            <div class="column tweet-feed">
+                <h2><i class="fab fa-twitter"></i> Live Alpha Feed</h2>
+                <div class="tweet-controls">
+                    <input type="text" id="add-account" placeholder="Add Twitter handle (without @)">
+                    <button id="add-account-btn">Add</button>
+                </div>
+                <div class="tweet-list" id="tweet-container">
+                    <!-- Tweets will be populated here -->
+                </div>
+            </div>
+
+            <!-- Column 3: KOL Trending + Tools -->
+            <div class="column kol-tools">
+                <!-- Top Section: KOL Trending -->
+                <div class="kol-trending">
+                    <h2><i class="fas fa-fire"></i> KOL Trending</h2>
+                    <div class="trending-list" id="kol-trending">
+                        <!-- KOL trending coins will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Middle Section: Bundle Checker -->
+                <div class="tool-section">
+                    <h2><i class="fas fa-box-open"></i> Bundle Checker</h2>
+                    <div class="tool-container">
+                        <input type="text" id="bundle-address" placeholder="Enter token contract address">
+                        <button id="check-bundle">Check</button>
+                        <div class="result" id="bundle-result">
+                            <!-- Bundle results will appear here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Section: Rug Checker -->
+                <div class="tool-section">
+                    <h2><i class="fas fa-shield-alt"></i> Rug Checker</h2>
+                    <div class="tool-container">
+                        <input type="text" id="rug-address" placeholder="Enter token contract address">
+                        <button id="check-rug">Check</button>
+                        <div class="result" id="rug-result">
+                            <!-- Rug check results will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
